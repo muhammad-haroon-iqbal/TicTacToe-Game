@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: #2e1537;
+  color: #fff;
+  padding: 0 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  list-style-type: none;
+}
+.gameContainer {
+  /* background-color: #da0808; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: "Roboto", sans-serif;
+}
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  background-color: #f5eaea;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 4vh;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #370179;
+}
+
+.gameInfo {
+  padding: 0 34px;
+  font-family: "Inria Sans", sans-serif;
+}
+
+.imgbox img {
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reset {
+  background-color: #a62dcb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 3vh;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+}
+#reset:hover {
+  background-color: #8b1f9c;
+}
+
+@media screen and (max-width: 800px) {
+  .gameContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  .box {
+    font-size: 20vw;
+  }
+  .info {
+    font-size: 5vh;
+  }
+  #reset {
+    font-size: 4vh;
+  }
+  nav {
+    font-size: 5vh;
+  }
+  .gameInfo {
+    padding: 0 10px;
+    font-size: 3vh;
+  }
+}
